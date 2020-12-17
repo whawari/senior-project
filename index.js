@@ -7,7 +7,7 @@ require("./models/User");
 require("./services/passport");
 
 mongoose.connect(keys.mongoURI, (error) => {
-  console.log("error connecting to database", error);
+  if (error) console.log("error connecting to database", error);
 });
 
 const app = express();
