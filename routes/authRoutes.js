@@ -16,16 +16,6 @@ module.exports = (app) => {
     }
   );
 
-  app.get("/", (req, res) => {
-    res.send({
-      hi: "there",
-      done_by: {
-        1: "Walid Hawari",
-        2: "Ibrahim Jardani",
-      },
-    });
-  });
-
   app.get("/api/current_user", (req, res) => {
     res.send(req.user);
   });
