@@ -1,0 +1,21 @@
+.navbar {
+    background-color: #1D2D60;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+.nav-btn {
+    background-color: #F65E5D;
+    border: 1px solid #F65E5D;
+    color: #1D2D60;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+    background-color: transparent;
+    color: #F65E5D;
+}
+
+.nav-logo {
+    padding-left: 15px !important;
+}

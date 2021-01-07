@@ -5,8 +5,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import  * as actions from "../actions";
 
-import Header from "./Header";
-import Landing from "./Landing";
+import Header from "./general/Header";
+import Homepage from "./homepage";
 
 
 const Dashboard = () => <h2>Dashboard</h2>;
@@ -24,7 +24,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <Route exact path="/" component={Landing} />
+            <Route exact path="/" component={Homepage} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/survey" component={Survey} />
           </div>

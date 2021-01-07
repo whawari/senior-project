@@ -13,7 +13,7 @@ class Payments extends Component {
         name="Electric Power Service"
         description="$5 for 5 credits"
       >
-        <button className="btn teal lighten-3">Add Credits</button>
+        <button className="btn nav-btn font__bold">Add Credits</button>
       </StripeCheckout>
     );
   }
