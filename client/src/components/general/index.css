@@ -25,32 +25,31 @@
 }
 
 #navBurger {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 25px;
-    width: 34px;
-    height: 34px;
-    max-width: 34px;
-    z-index: 75;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    /* background-color: green; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  width: 34px;
+  height: 34px;
+  max-width: 34px;
+  z-index: 75;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-burger-piece {
-    width: 100%;
-    height: 4px;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    background-color: var(--deep-orange);
-    transform-origin: left;
-    transition: transform .5s;
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: var(--deep-orange);
+  transform-origin: left;
+  transition: transform 0.5s;
 }
 
 .nav-burger-piece-two {
-    transform: translateX(10px);
+  transform: translateX(10px);
 }
 
 /* footer */
@@ -58,6 +57,8 @@
   background-color: var(--indigo);
   padding: 100px 15px;
   min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
 
 .app-footer-upper {
@@ -66,6 +67,14 @@
   align-items: flex-end;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--deep-orange);
+}
+
+.app-footer-upper > a {
+  line-height: 15px;
+}
+
+.app-footer-upper > a > img {
+  max-width: 200px;
 }
 
 .follow-us-wrapper {
@@ -121,13 +130,12 @@
   }
 
   .activate-navbar {
-      display: flex !important;
+    display: flex !important;
   }
 
   .stop-scroll {
-      overflow: hidden !important;
+    overflow: hidden !important;
   }
-
 }
 
 @media only screen and (min-width: 769px) {
@@ -138,6 +146,6 @@
   }
 
   #navBurger {
-      display: none;
+    display: none;
   }
 }
