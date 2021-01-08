@@ -75,9 +75,24 @@ class Header extends Component {
             {this.renderContent()}
           </ul>
           <div id="navBurger" onClick={this.handleNavbarActive}>
-            <div className="nav-burger-piece nav-burger-piece-one"></div>
-            <div className="nav-burger-piece nav-burger-piece-two"></div>
-            <div className="nav-burger-piece nav-burger-piece-three"></div>
+            <div
+              className="nav-burger-piece nav-burger-piece-one"
+              style={{
+                transform: this.state.navbarActive ? "rotate(45deg)" : "",
+              }}
+            ></div>
+            <div
+              className="nav-burger-piece nav-burger-piece-two"
+              style={{
+                transform: this.state.navbarActive ? "translateX(100px)" : "",
+              }}
+            ></div>
+            <div
+              className="nav-burger-piece nav-burger-piece-three"
+              style={{
+                transform: this.state.navbarActive ? "rotate(-45deg)" : "",
+              }}
+            ></div>
           </div>
         </div>
       </nav>
