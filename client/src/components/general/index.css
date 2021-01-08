@@ -1,21 +1,85 @@
 .navbar {
-    background-color: #1D2D60;
-    position: fixed;
-    width: 100%;
-    top: 0px;
+  background-color: var(--indigo);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 50;
 }
 
 .nav-btn {
-    background-color: #F65E5D;
-    border: 1px solid #F65E5D;
-    color: #1D2D60;
+  background-color: var(--deep-orange);
+  border: 1px solid var(--deep-orange);
+  color: var(--indigo);
 }
 
-.nav-btn:hover, .nav-btn:focus {
-    background-color: transparent;
-    color: #F65E5D;
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: transparent;
+  color: var(--deep-orange);
 }
 
 .nav-logo {
-    padding-left: 15px !important;
+  padding-left: 15px !important;
+}
+
+/* footer */
+#appFooter {
+  background-color: var(--indigo);
+  padding: 100px 15px;
+  min-height: 50vh;
+}
+
+.app-footer-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--deep-orange);
+}
+
+.follow-us-wrapper {
+  margin: 0px -6px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.follow-us-wrapper > a {
+  height: 40px;
+}
+
+.follow-us-wrapper > a,
+.follow-us-wrapper > h4 {
+  padding: 0 6px;
+  display: inline-block;
+}
+
+.app-footer-lower {
+  padding-top: 20px;
+}
+
+.footer-site-links > a {
+  display: block;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--deep-orange);
+}
+
+@media only screen and (max-width: 768px) {
+  .app-footer-upper {
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .app-footer-upper > .follow-us-wrapper {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .app-footer-lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
