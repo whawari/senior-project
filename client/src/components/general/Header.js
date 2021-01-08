@@ -42,7 +42,10 @@ class Header extends Component {
               <Payments />
             </li>
             <li>
-              <span className="color__light__blue">
+              <span
+                className="color__light__blue font__bold"
+                style={{ fontSize: "18px" }}
+              >
                 credits: {this.props.auth.credits}
               </span>
             </li>
@@ -65,7 +68,7 @@ class Header extends Component {
       <nav className="navbar">
         <div className="nav-wrapper">
           <Link to="/" className="left brand-logo nav-logo">
-            <img src="./assets/logo.png" alt="logo"/>
+            <img src="./assets/logo.png" alt="logo" />
           </Link>
           <ul
             className={`right ${
