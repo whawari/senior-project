@@ -65,7 +65,7 @@ class Header extends Component {
       <nav className="navbar">
         <div className="nav-wrapper">
           <Link to="/" className="left brand-logo nav-logo">
-            EPS
+            <img src="./assets/logo.png" alt="logo"/>
           </Link>
           <ul
             className={`right ${
