@@ -6,6 +6,22 @@ import "./index.css";
 import Payments from "../Payments";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navbarActive: false,
+    };
+  }
+
+  handleNavbarActive = () => {
+    this.setState({
+      navbarActive: !this.state.navbarActive,
+    });
+
+    let htmlElement = document.querySelector("html");
+    htmlElement.classList.toggle("stop-scroll");
+  };
+
   renderContent() {
     // this.props.auth is accessed from the connect function
     switch (this.props.auth) {
@@ -14,7 +30,9 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google" className="color__deep__orange">Login</a>
+            <a href="/auth/google" className="color__deep__orange">
+              Login
+            </a>
           </li>
         );
       default:
@@ -24,12 +42,18 @@ class Header extends Component {
               <Payments />
             </li>
             <li>
-              <span className="color__deep__orange">
-                credits: { this.props.auth.credits }
+              <span className="color__light__blue">
+                credits: {this.props.auth.credits}
               </span>
             </li>
             <li>
-              <a href="/api/logout" className="color__deep__orange">Logout</a>
+              <a
+                href="/api/logout"
+                className="color__deep__orange font__bold"
+                style={{ fontSize: "18px" }}
+              >
+                Logout
+              </a>
             </li>
           </>
         );
@@ -43,7 +67,18 @@ class Header extends Component {
           <Link to="/" className="left brand-logo nav-logo">
             EPS
           </Link>
-          <ul className="right">{ this.renderContent() }</ul>
+          <ul
+            className={`right ${
+              this.state.navbarActive ? "activate-navbar" : ""
+            }`}
+          >
+            {this.renderContent()}
+          </ul>
+          <div id="navBurger" onClick={this.handleNavbarActive}>
+            <div className="nav-burger-piece nav-burger-piece-one"></div>
+            <div className="nav-burger-piece nav-burger-piece-two"></div>
+            <div className="nav-burger-piece nav-burger-piece-three"></div>
+          </div>
         </div>
       </nav>
     );
