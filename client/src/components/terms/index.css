@@ -1,0 +1,8 @@
+#terms-and-conditions {
+    padding-top: 64px;
+    background-color: var(--indigo);
+}
+
+#terms-and-conditions > .container {
+    color: var(--light-blue);
+}
