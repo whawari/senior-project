@@ -1,0 +1,75 @@
+#contact-us {
+  padding-top: 64px;
+  background-color: var(--indigo);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+#contact-us h1 {
+  text-align: center;
+  font-weight: var(--bold-font);
+  color: var(--light-blue);
+}
+
+.contact-input-field-wrapper {
+  margin-bottom: 40px;
+}
+
+.contact-input-field-wrapper > label {
+  font-size: 16px;
+  color: var(--light-blue);
+}
+
+.contact-input-field-wrapper > input,
+.contact-input-field-wrapper > textarea {
+  border: none;
+  border-bottom: 1px solid var(--white) !important;
+  color: var(--light-blue);
+  transition: border-bottom-color 0.5s;
+  margin: unset !important;
+}
+
+.contact-input-field-wrapper > textarea {
+  resize: none;
+  height: unset;
+}
+
+.contact-input-field-wrapper > input:focus,
+.contact-input-field-wrapper > textarea:focus {
+  outline: none;
+  box-shadow: unset !important;
+  border-bottom-color: var(--light-blue) !important;
+}
+
+.contact-input-field-wrapper > p {
+  font-size: 13px;
+  color: var(--danger);
+  min-height: 19px;
+}
+
+#contact-submit {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 10px 30px;
+  width: 100%;
+  max-width: 188px;
+  border: 2px solid var(--deep-orange);
+  border-radius: 25px;
+  color: var(--deep-orange);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  margin: 12px 0;
+}
+
+#contact-submit:hover {
+  background-color: var(--deep-orange);
+  color: var(--indigo);
+}
+
+#contact-submit:focus {
+  outline: none;
+}

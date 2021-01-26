@@ -19,11 +19,13 @@ body::-webkit-scrollbar {
 :root {
   /* color palette */
   --deep-orange: #f65e5d;
+  --danger: #F44336;
   --amber: #ffbc47;
   --indigo: #1d2d60;
   --white: #f0f0f0;
   --light-blue: #40cee2;
   --dark-grey: #212121;
+  --bold-font: 700;
 }
 
 .color__deep__orange {
