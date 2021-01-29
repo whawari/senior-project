@@ -19,6 +19,7 @@ module.exports = (app) => {
     const user = await req.user.save();
 
     res.send(user);
+    
   });
 
   app.post("/api/order", requireLogin, requireCredits, async (req, res) => {
