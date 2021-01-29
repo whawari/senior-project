@@ -1,0 +1,139 @@
+#order {
+  min-height: 50vh;
+  padding-top: 100px;
+}
+
+.order-hero-image {
+  width: 100%;
+  max-width: 645px;
+  height: 200px;
+  overflow: hidden;
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.order-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--indigo);
+  border-radius: 10px;
+  margin: 12px;
+  padding: 12px;
+}
+
+.order-quantity-wrapper {
+  width: 100%;
+}
+
+.order-quantity-wrapper > h3 {
+  font-weight: var(--bold-font);
+  color: var(--dark-grey);
+}
+
+.order-products-images > img {
+  max-width: 80%;
+}
+
+#order-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px -12px 0;
+}
+
+.order-field-inputs-group > input {
+  max-width: 645px;
+  display: block;
+  margin: 12px auto !important;
+}
+
+.order-field-inputs-group > input:focus {
+  border-bottom-color: var(--dark-grey) !important;
+  box-shadow: none !important;
+}
+
+.order-field-inputs-group > span {
+  width: 100%;
+  display: block;
+  max-width: 645px;
+  margin: 0 auto;
+  font-size: 13px;
+  margin-top: -10px;
+  color: var(--danger);
+}
+.order-field-inputs-group {
+  width: 100%;
+  margin: 12px auto;
+  flex-basis: 100%;
+}
+
+#order-form > p {
+  margin: 12px auto;
+  max-width: 645px;
+  color: var(--dark-grey);
+}
+
+#order-form > h3 {
+  flex-basis: 100%;
+  text-align: center;
+  font-weight: var(--bold-font);
+  color: var(--dark-grey);
+  margin: 12px;
+}
+
+#order-submit {
+  font-weight: var(--bold-font);
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--dark-grey);
+  width: 100%;
+  height: 50px;
+  max-width: 188px;
+  border: 2px solid var(--dark-grey);
+  border-radius: 25px;
+  background-color: transparent;
+  transition: color 0.5s, background-color 0.5s;
+  margin: 12px auto 36px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+#order-submit:hover {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+#order-submit:focus {
+  outline: none;
+}
+
+#order > .container > p {
+  font-size: 13px;
+  color: var(--danger);
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 36px;
+}
+
+@media only screen and (max-width: 768px) {
+  .order-images-container {
+    width: 100%;
+  }
+
+  .order-quantity-wrapper > h3 {
+    font-size: 16px;
+  }
+
+  .order-field-inputs-group,
+  #order-form > p {
+    margin: 12px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .order-images-container {
+    width: calc(50% - 24px);
+  }
+}

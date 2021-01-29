@@ -3,8 +3,8 @@ const contactUsAdminTemplate = require("../services/emailTemplates/contactUsAdmi
 const contactUsUserTemplate = require("../services/emailTemplates/contactUsUserTemplate");
 
 module.exports = (app) => {
-  app.post("/api/mail/contact", (req, res) => {
-    const data = req.body;
+  app.post("/api/mail/contact", async (req, res) => {
+    const data = await req.body;
 
     // send mail to the admin
     const mailerAdmin = new Mailer(

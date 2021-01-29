@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "./Hero";
 import BannerWithImage from "./BannerWithImage";
+import AOS from "aos"
+import "aos/dist/aos.css";
 import "./index.css";
+import { useLocation } from "react-router-dom";
 
 const Homepage = () => {
+  AOS.init();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   return (
     <>
       <Hero />

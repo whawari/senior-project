@@ -24,7 +24,7 @@ body::-webkit-scrollbar {
   --indigo: #1d2d60;
   --white: #f0f0f0;
   --light-blue: #40cee2;
-  --dark-grey: #212121;
+  --dark-grey: #232423;
   --bold-font: 700;
 }
 
@@ -74,25 +74,4 @@ h5 {
 
 h6 {
   font-size: 16px;
-}
-
-.comming-soon-page {
-  height: calc(50vh - 64px);
-  margin-top: 64px;
-  background-color: var(--dark-grey);
-  display: flex;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-
-.page-title {
-  color: var(--light-blue);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.comming-soon {
-  color: var(--light-blue);
-  font-weight: 600;
 }

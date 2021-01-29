@@ -1,7 +1,7 @@
 /* order now button */
 #orderNowButton {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: var(--bold-font);
   text-transform: uppercase;
   font-size: 18px;
   padding: 10px 30px;

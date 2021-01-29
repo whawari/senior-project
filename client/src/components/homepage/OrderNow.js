@@ -4,7 +4,7 @@ import React from "react";
 const OrderNow = ({ buttonColor }) => {
   return (
     <Link
-      to="/products"
+      to="/order"
       id="orderNowButton"
       className={`${buttonColor === "white" ? "white-button" : "black-button"}`}
     >

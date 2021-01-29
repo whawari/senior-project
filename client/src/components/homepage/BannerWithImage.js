@@ -8,7 +8,7 @@ const BannerWithImage = ({
   isReversed,
   videoSrc,
   imgSrc,
-  sectionId
+  sectionId,
 }) => {
   return (
     <section
@@ -18,8 +18,16 @@ const BannerWithImage = ({
       }`}
     >
       <div className="left-column flex__container flex__direction__column flex__nowrap justify__center">
-        <h1>{header}</h1>
-        <p>{description}</p>
+        <h1 data-aos="fade-up" data-aos-once="true">
+          { header }
+        </h1>
+        <p 
+          data-aos="fade-up" 
+          data-aos-once="true" 
+          data-aos-duration="1000"
+        >
+          { description }
+        </p>
         <OrderNow buttonColor="black" />
       </div>
       <div className="right-column flex__one">
@@ -29,7 +37,7 @@ const BannerWithImage = ({
             Sorry, your browser doesn't support embedded videos.
           </video>
         ) : (
-          <img src={imgSrc} alt="hero" />
+          <img src={ imgSrc } alt="hero" />
         )}
       </div>
     </section>

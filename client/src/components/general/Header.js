@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-import Payments from "../Payments";
+import Payments from "../payments";
 
 class Header extends Component {
   constructor(props) {
@@ -64,6 +64,7 @@ class Header extends Component {
   }
 
   render() {
+    // console.log(this.props.auth)
     return (
       <nav className="navbar">
         <div className="nav-wrapper">
