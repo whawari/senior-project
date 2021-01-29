@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import axios from "axios";
 import validator from "validator";
 import { useLocation } from "react-router-dom";
 import * as actions from "../../actions";
