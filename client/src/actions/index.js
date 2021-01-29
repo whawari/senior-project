@@ -17,3 +17,11 @@ export const handleStripeToken = (token) => async (dispatch) => {
 
   dispatch({ type: FETCH_USER, payload: res.data });
 };
+
+export const submitOrder = (data) => async (dispatch) => {
+  const res = await axios.post("/api/order", data);
+
+  dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+

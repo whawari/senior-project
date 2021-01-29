@@ -3,16 +3,17 @@ import { connect } from "react-redux";
 import axios from "axios";
 import validator from "validator";
 import { useLocation } from "react-router-dom";
+import * as actions from "../../actions";
 
 import "./index.css";
 
-const Order = ({ auth }) => {
+const Order = ({ auth, submitOrder }) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   const [credits, setCredits] = useState("");
   const [solarPanelsQuantity, setSolarPanelsQuantity] = useState(2);
   const [powerWallsQuantity, setPowerWallsQuantity] = useState(1);
@@ -52,24 +53,18 @@ const Order = ({ auth }) => {
       validator.isEmail(email) &&
       address !== ""
     ) {
-      axios
-        .post("/api/order", {
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          address: address,
-          panelsQuantity: solarPanelsQuantity,
-          panelCost: solarPanelCost,
-          powerWallsQuantity: powerWallsQuantity,
-          powerWallCost: powerWallCost,
-          totalCost: totalCost,
-        })
-        .then((response) => {
-          console.log("response:", response);
-        })
-        .catch((error) => {
-          console.log("error:", error);
-        });
+      const orderData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        address: address,
+        panelsQuantity: solarPanelsQuantity,
+        panelCost: solarPanelCost,
+        powerWallsQuantity: powerWallsQuantity,
+        powerWallCost: powerWallCost,
+        totalCost: totalCost,
+      };
+      submitOrder(orderData);
     }
   };
 
@@ -215,4 +210,4 @@ const mapStateToProps = ({ auth }) => {
   };
 };
 
-export default connect(mapStateToProps)(Order);
+export default connect(mapStateToProps, actions)(Order);
